@@ -1,26 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand-50: #e6f6f7;
+  --color-brand-100: #c2e9ec;
+  --color-brand-500: #00979d;
+  --color-brand-600: #00878f;
+  --color-brand-700: #006d74;
+  --color-brand-900: #0b3b3e;
+  --font-sans: var(--font-noto-sans-kr), system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f8fa;
+  color: #1f2328;
+}
+
+@utility input {
+  @apply w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-100;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@utility btn-primary {
+  @apply btn bg-brand-600 text-white hover:bg-brand-700;
+}
+
+@utility btn-outline {
+  @apply btn border border-gray-300 bg-white text-gray-800 hover:bg-gray-50;
+}
+
+@utility card {
+  @apply rounded-lg border border-gray-200 bg-white;
 }
