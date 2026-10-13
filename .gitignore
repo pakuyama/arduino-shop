@@ -42,3 +42,6 @@ next-env.d.ts
 
 # 로컬 테스트 계정 정보
 *.local.md
+
+.vercel
+.env*

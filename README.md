@@ -2,6 +2,8 @@
 
 Next.js 16 (App Router) + Supabase + 토스페이먼츠(테스트 모드)로 만든 아두이노 쇼핑몰입니다.
 
+배포: https://arduino-shop-roan.vercel.app (Vercel)
+
 ## 실행
 
 ```bash
